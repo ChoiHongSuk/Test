@@ -5,6 +5,6 @@ void main(){
 	int total=0;
 	print(total);
 }
-int sub(int a, int b){
+int sum(int a, int b){
 	return a + b;
 }
