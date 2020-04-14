@@ -6,3 +6,6 @@ void main(){
 	int total=sub(a,b);
 	printf(total);
 }
+int mul(int a, int b){
+	return a * b;
+}
