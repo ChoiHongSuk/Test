@@ -19,6 +19,6 @@ void main() {
 	printf("Reset-After: ");
 	print_complex(a);
 	
-	printf("Checkout!");
+	printf("Complete");
 	return 0;
 }
