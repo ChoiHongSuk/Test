@@ -11,7 +11,7 @@ void reset_complex(complex* c) {
 	c->real = c->imag = 0.0;
 };
 void main() {
-	complex a = {4.0, 5.0};
+	complex a = {1.0, 2.0};
 
 	printf("Reset-Before: ");
 	print_complex(a);
