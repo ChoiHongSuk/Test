@@ -13,10 +13,12 @@ void reset_complex(complex* c) {
 void main() {
 	complex a = {1.0, 2.0};
 
-	printf("초기화 이전: ");
+	printf("Reset-Before: ");
 	print_complex(a);
 	reset_complex(&a);
-	printf("초기화 이후: ");
+	printf("Reset-After: ");
 	print_complex(a);
+	
+	printf("Checkout!");
 	return 0;
 }
