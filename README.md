@@ -2,7 +2,7 @@ Practice C Language Project
 
 1. path, host 라운드 로빈
 >	* 파싱한 HTTP 헤더의 파싱 결과와 config파일에 정의된 룰을 비교해 서버 라운드로빈
-
+***
 2. 사용방법
 >	* 프로그램과 함께 config 파일 경로를 인자로 넣음
 >	* ``` #http_main config.txt ```
@@ -19,7 +19,7 @@ http헤더 경로를 입력하세여. (or Exit: q) >
 q
 C 프로그램을 종료합니다.
 ~~~
-
+***
 3. 소스코드
 > * 주요 구조체
 	* struct rule_node
