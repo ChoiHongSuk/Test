@@ -13,7 +13,6 @@ Practice C Language Project
 >	> 2. struct node node
 >	> 3. struct node list
 
-</pre>
 * 주요 함수
   * file_read
     * 파일을 읽어드려 버퍼를 생성
