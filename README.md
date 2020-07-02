@@ -7,7 +7,7 @@ Practice C Language Project
 > * 프로그램과 함께 config 파일 경로를 인자로 넣음
 >	> ``` #http_main config.txt ```
 > * 프로그램 내에서 HTTP헤더 파일 경로 입력 (라운드 로빈 후 다시 입력)
->	> `
+>	> 
 ~~~ C
 C http헤더 경로를 입력하세여. (or Exit: q) > test.txt
 192.168.216.173:443
@@ -15,7 +15,6 @@ http헤더 경로를 입력하세여. (or Exit: q) > test.txt
 192.168.216.172:443
 http헤더 경로를 입력하세여. (or Exit: q) > 
 ~~~
-`
 > * 프로그램 종료 시 'q' 입력
 >	>
 ~~~ C
@@ -26,28 +25,31 @@ C 프로그램을 종료합니다.
 3. 소스코드
 > * 주요 구조체
 > 	> 1. struct rule_node
->	>	``` C typedef struct rule_node```
->	>	``` C {```
->	>	``` C 		int type; ```
->	>	``` C 		int match; ```
->	>	``` C 		char* string; ```
->	>	``` C 		struct addr_node* addr_node; ```
->	>	``` C 		 ```
->	>	``` C 		struct rule_node* tail; ```
->	>	``` C 		struct rule_node* next; ```
->	>	``` C 		struct rule_node* prev; ```
->	>	``` C }_rule_node;```
+~~~ C
+C typedef struct rule_node
+{
+ 		int type;
+ 		int match;
+		char* string;
+ 		struct addr_node* addr_node;
+		 
+		struct rule_node* tail;
+		struct rule_node* next;
+		struct rule_node* prev;
+}_rule_node;
+~~~
 >	> 2. struct addr_node
->	>	``` C typedef struct addr_node```
->	>	``` C {```
->	>	``` C 		char* ip; ```
->	>	``` C 		char* port; ```
->	>	``` C 		 ```
->	>	``` C 		struct rule_node* tail; ```
->	>	``` C 		struct rule_node* next; ```
->	>	``` C 		struct rule_node* prev; ```
->	>	``` C }_addr_node;```
-
+~~~ C
+typedef struct addr_node
+{
+ 		char* ip;
+		char* port;
+		
+		struct rule_node* tail;
+ 		struct rule_node* next;
+ 		struct rule_node* prev;
+}_addr_node;
+~~~
 > * 주요 파일
 >	> 1. rule_parsing
 >	>	> 파일을 라인으로 읽어 SP 구분자로 쪼갠 후 각 rule_node의 항목 별로 파싱
