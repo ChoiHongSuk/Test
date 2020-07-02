@@ -1,28 +1,50 @@
 Practice C Language Project
 
-1. HTTP RFC표준 기반 파싱
-> * HTTP 헤더를 RFC표준에 맞게 재가공
-> > ``` C printf("hellow world\n");
-hi ```
- 
+1. path, host 라운드 로빈
+> * 파싱한 HTTP 헤더의 파싱 결과와 config파일에 정의된 룰을 비교해 서버 라운드로빈
+
 2. 사용방법
-> * 프로그램 실행 시 인자로 dumping한 http request 헤더 파일경로를 입력
-> * 해당 경로 파일을 읽어 RFC표준에 맞게 정리된 새 파일을 생성
+> * 프로그램과 함께 config 파일 경로를 인자로 넣음
+>	> ``` C #http_main config.txt ```
+> * 프로그램 내에서 HTTP헤더 파일 경로 입력 (라운드 로빈 후 다시 입력)
+>	> ``` C http헤더 경로를 입력하세여. (or Exit: q) > test.txt```
+>	> ``` C 192.168.216.173:443```
+>	> ``` C http헤더 경로를 입력하세여. (or Exit: q) > test.txt```
+>	> ``` C 192.168.216.172:443```
+>	> ``` C http헤더 경로를 입력하세여. (or Exit: q) > ```
+> * 프로그램 종료 시 'q' 입력
+>	> ``` C q```
+>	> ``` C 프로그램을 종료합니다.```
 
 3. 소스코드
 > * 주요 구조체
-> 	> 1. struct request
->	> 2. struct node node
->	> 3. struct node list
+> 	> 1. struct rule_node
+>	>	``` C typedef struct rule_node```
+>	>	``` C {```
+>	>	``` C 		int type; ```
+>	>	``` C 		int match; ```
+>	>	``` C 		char* string; ```
+>	>	``` C 		struct addr_node* addr_node; ```
+>	>	``` C 		 ```
+>	>	``` C 		struct rule_node* tail; ```
+>	>	``` C 		struct rule_node* next; ```
+>	>	``` C 		struct rule_node* prev; ```
+>	>	``` C }_rule_node;```
+>	> 2. struct addr_node
+>	>	``` C typedef struct addr_node```
+>	>	``` C {```
+>	>	``` C 		char* ip; ```
+>	>	``` C 		char* port; ```
+>	>	``` C 		 ```
+>	>	``` C 		struct rule_node* tail; ```
+>	>	``` C 		struct rule_node* next; ```
+>	>	``` C 		struct rule_node* prev; ```
+>	>	``` C }_addr_node;```
 
-* 주요 함수
-  * file_read
-    * 파일을 읽어드려 버퍼를 생성
-  * file_write
-    * 파싱한 결과물을 파일로 출력
-  * buf_devide
-    * 버퍼를 라인별로 쪼갬
-  * req_extractor
-     * 요청 헤더 파싱
-  * head_extractor
-    * 요청 헤더 파싱
+> * 주요 파일
+>	> 1. rule_parsing
+>	>	> 파일을 라인으로 읽어 SP 구분자로 쪼갠 후 각 rule_node의 항목 별로 파싱
+>	> 2. compare
+>	>	> http 헤더 파싱 결과물과 config 파싱 결과물로 type별 string을 match방법으로 찾음
+>	> 3. memstring
+>	>	> compare에서 string을 뒤로 찾을 때의 memstrr()함수를 사용함
