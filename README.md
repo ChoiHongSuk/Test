@@ -1,12 +1,12 @@
 Practice C Language Project
 
 ## 1. path, host 라운드 로빈
-	* 파싱한 HTTP 헤더의 파싱 결과와 config파일에 정의된 룰을 비교해 서버 라운드로빈
+>	* 파싱한 HTTP 헤더의 파싱 결과와 config파일에 정의된 룰을 비교해 서버 라운드로빈
 ***
 ## 2. 사용방법
-	* 프로그램과 함께 config 파일 경로를 인자로 넣음
-	* ``` #http_main config.txt ```
-	* 프로그램 내에서 HTTP헤더 파일 경로 입력 (라운드 로빈 후 다시 입력), 프로그램 종료 시 'q' 입력
+>	* 프로그램과 함께 config 파일 경로를 인자로 넣음
+>	* ``` #http_main config.txt ```
+>	* 프로그램 내에서 HTTP헤더 파일 경로 입력 (라운드 로빈 후 다시 입력), 프로그램 종료 시 'q' 입력
 ~~~ C
 C http헤더 경로를 입력하세여. (or Exit: q) > test.txt
 192.168.216.173:443
