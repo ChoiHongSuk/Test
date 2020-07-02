@@ -49,9 +49,9 @@ typedef struct addr_node
 }_addr_node;
 ~~~
 > * 주요 파일
->	* 1. rule_parsing
+>	* rule_parsing
 >		* 파일을 라인으로 읽어 SP 구분자로 쪼갠 후 각 rule_node의 항목 별로 파싱
->	* 2. compare
->		*http 헤더 파싱 결과물과 config 파싱 결과물로 type별 string을 match방법으로 찾음
->	* 3. memstring
+>	* compare
+>		* http 헤더 파싱 결과물과 config 파싱 결과물로 type별 string을 match방법으로 찾음
+>	* memstring
 >		* compare에서 string을 뒤로 찾을 때의 memstrr()함수를 사용함
