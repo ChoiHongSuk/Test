@@ -3,7 +3,7 @@ Practice C Language Project
 1. HTTP RFC표준 기반 파싱
 > * HTTP 헤더를 RFC표준에 맞게 재가공
 > > ``` C
-abcd
+printf();
 ```
  
 2. 사용방법
