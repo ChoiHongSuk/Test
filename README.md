@@ -19,7 +19,7 @@ C 프로그램을 종료합니다.
 ***
 ## 3. 소스코드
 > * 주요 구조체
->	* struct rule_node
+>	* struct rule_node, struct addr_node
 ~~~ C
 C typedef struct rule_node
 {
@@ -32,9 +32,7 @@ C typedef struct rule_node
 		struct rule_node* next;
 		struct rule_node* prev;
 }_rule_node;
-~~~
->	* struct addr_node
-~~~ C
+
 typedef struct addr_node
 {
  		char* ip;
