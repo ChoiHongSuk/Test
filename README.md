@@ -22,7 +22,7 @@ C 프로그램을 종료합니다.
 
 3. 소스코드
 > * 주요 구조체
-	* 1. struct rule_node
+	* struct rule_node
 ~~~ C
 C typedef struct rule_node
 {
