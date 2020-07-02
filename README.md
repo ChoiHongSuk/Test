@@ -33,7 +33,7 @@ C typedef struct rule_node
 		struct rule_node* prev;
 }_rule_node;
 ~~~
->	* 2. struct addr_node
+>	* struct addr_node
 ~~~ C
 typedef struct addr_node
 {
