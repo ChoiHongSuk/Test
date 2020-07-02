@@ -1,6 +1,6 @@
 Practice C Language Project
 
-####1. path, host 라운드 로빈
+#### 1. path, host 라운드 로빈
 	* 파싱한 HTTP 헤더의 파싱 결과와 config파일에 정의된 룰을 비교해 서버 라운드로빈
 ***
 2. 사용방법
