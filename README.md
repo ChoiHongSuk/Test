@@ -2,7 +2,8 @@ Practice C Language Project
 
 1. HTTP RFC표준 기반 파싱
 > * HTTP 헤더를 RFC표준에 맞게 재가공
-
+ printf();
+ 
 2. 사용방법
 > * 프로그램 실행 시 인자로 dumping한 http request 헤더 파일경로를 입력
 > * 해당 경로 파일을 읽어 RFC표준에 맞게 정리된 새 파일을 생성
