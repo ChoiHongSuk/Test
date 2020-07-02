@@ -14,14 +14,14 @@ Practice C Language Project
 >	> 3. struct node list
 
 </pre>
-> * 주요 함수
->	> 1. file_read
->	>	> 파일을 읽어드려 버퍼를 생성
->	> 2. file_write
->	>	> 파싱한 결과물을 파일로 출력
->	> 3. buf_devide
->	>	> 버퍼를 라인별로 쪼갬
->	> 4. req_extractor
->	>	> 요청 헤더 파싱
->	> 5. head_extractor
->	>	> 요청 헤더 파싱
+* 주요 함수
+  * file_read
+    * 파일을 읽어드려 버퍼를 생성
+  * file_write
+    * 파싱한 결과물을 파일로 출력
+  * buf_devide
+    * 버퍼를 라인별로 쪼갬
+  * req_extractor
+     * 요청 헤더 파싱
+  * head_extractor
+    * 요청 헤더 파싱
